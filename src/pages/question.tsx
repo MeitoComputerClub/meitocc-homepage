@@ -1,3 +1,3 @@
 export default function Question() {
-  return <h1>question</h1>;
+  return <h1>Question</h1>;
 }
