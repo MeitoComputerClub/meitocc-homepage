@@ -2,9 +2,11 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <header className={styles.header}>
@@ -17,7 +19,25 @@ export default function Header() {
             className={styles.logo}
           />
         </Link>
-        <nav className={styles.nav}>
+
+        <button
+          className={styles.menuButton}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
+
+        {isOpen && (
+          <div
+            className={`${styles.overlay} ${styles.overlayOpen}`}
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+
+        <nav
+          className={`${styles.nav} ${isOpen ? styles.open : ""}`}
+          onClick={(e) => e.stopPropagation()}
+        >
           <ul>
             <li>
               <Link
