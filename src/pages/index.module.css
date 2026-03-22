@@ -1,0 +1,128 @@
+.container {
+  background: #444;
+  color: white;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space between;
+  align-items: flex-start;
+  margin-top: clamp(40px, 6vw, 100px);
+  flex-direction: column;
+  position: relative;
+}
+
+.catch {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  opacity: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transform: translateY(10px);
+}
+
+@media (max-width: 768px) {
+  .catch {
+    position: static;
+    margin-top: 2px;
+  }
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  word-break: normal;
+  overflow-wrap: normal;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: #20b2aa;
+}
+
+@media (max-width: 768px) {
+  .title {
+    letter-spacing: 0.01em;
+  }
+}
+
+.heroLeft {
+  position: relative;
+}
+
+.aboutTitle {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #ff8000;
+  letter-spacing: 0.1em;
+  transform: translateY(10px);
+}
+
+@media (max-width: 768px) {
+  .aboutTitle {
+    position: static;
+    transform: none;
+    margin: 40px auto;
+    text-align: center;
+  }
+}
+
+.info {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.card p {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
