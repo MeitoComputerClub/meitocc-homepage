@@ -1,4 +1,3 @@
-import styles from "./Header.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -7,70 +6,64 @@ import { useState } from "react";
 export default function Header() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Blog", href: "/blog" },
+    { name: "Question", href: "/question" },
+  ];
+
   return (
     <>
-      <header className={styles.header}>
+      <header className="flex items-center p-[15px_10px]">
         <Link href="/">
           <Image
             src="/aurora.png"
             alt="logo"
             width={50}
             height={50}
-            className={styles.logo}
+            className="h-10 w-auto"
           />
         </Link>
 
         <button
-          className={styles.menuButton}
+          className="fixed right-5 top-5 z-30 block text-2xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
         </button>
 
-        {isOpen && (
-          <div
-            className={`${styles.overlay} ${styles.overlayOpen}`}
-            onClick={() => setIsOpen(false)}
-          />
-        )}
+        {/* Overlay */}
+        <div
+          className={`fixed inset-0 z-10 bg-white/10 backdrop-blur-[3px] transition-opacity duration-300 ${
+            isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
+          onClick={() => setIsOpen(false)}
+        />
 
+        {/* Navigation */}
         <nav
-          className={`${styles.nav} ${isOpen ? styles.open : ""}`}
+          className={`fixed right-5 top-5 z-20 transition-all duration-300 md:static md:flex-1 md:opacity-100 md:scale-100 ${
+            isOpen
+              ? "scale-100 opacity-100"
+              : "scale-75 opacity-0 pointer-events-none md:pointer-events-auto"
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
-          <ul>
-            <li>
-              <Link
-                href="/"
-                className={`${styles.link} ${router.pathname === "/" ? styles.active : ""}`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/gallery"
-                className={`${styles.link} ${router.pathname === "/gallery" ? styles.active : ""}`}
-              >
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className={`${styles.link} ${router.pathname === "/blog" ? styles.active : ""} `}
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/question"
-                className={`${styles.link} ${router.pathname === "/question" ? styles.active : ""}`}
-              >
-                Question
-              </Link>
-            </li>
+          <ul className="flex flex-col gap-5 bg-[#444] p-5 md:flex-row md:items-center md:justify-evenly md:bg-transparent md:p-0 md:gap-[30px] md:mt-5">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`relative pb-1 text-decoration-none after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#ff8000] after:transition-all after:duration-300 hover:after:w-full ${
+                    router.pathname === link.href ? "after:w-full" : "after:w-0"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
