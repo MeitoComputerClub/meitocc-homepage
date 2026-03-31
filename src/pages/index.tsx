@@ -1,70 +1,87 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="relative z-0 min-h-screen overflow-hidden bg-[#444] p-10 text-white">
+    <main className="relative z-0 min-h-screen overflow-hidden mb-2.5 bg-[#111] p-10 text-white">
       {/* 背景のグリッド線 */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] mb-2.5 bg-size-[40px_40px]" />
 
       {/* Hero Section */}
-      <section className="relative mt-[clamp(40px,6vw,100px)] flex flex-col items-start justify-between">
+      <section
+        className="relative mt-[clamp(40px,6vw,100px)] flex flex-col items-start justify text"
+        l-border-l-2
+        border-l-
+      >
         <div className="relative">
           <h1 className="text-[clamp(2.5rem,8vw,6rem)] font-extrabold leading-[0.9] tracking-tighter text-[#20b2aa] md:tracking-normal">
-            M~~~~
+            MEITO
             <br />
             COMPUTER
             <br />
-            CLUB
+            <span className="inline-block">
+              CLUB
+              <div className="mt-2 h-0.5 w-full mb-1 bg-[#ff8000]" />
+            </span>
           </h1>
-          <p className="static mt-[2px] text-[clamp(1.2rem,2.5vw,1.8rem)] tracking-widest md:absolute md:bottom-[-20px] md:left-0 md:translate-y-[10px] md:whitespace-nowrap">
+
+          <p className="mt-0.5 text-[clamp(1.2rem,2.5vw,1.8rem)] tracking-widest md:absolute mdm-5 md-l-border-l-2 border-l-0 md:translate-y-2.5 md:whitespace-nowrap">
             design and development
           </p>
         </div>
       </section>
 
       {/* Info Section */}
-      <section className="mt-[120px] flex flex-col items-center gap-10">
-        <h2 className="mb-10 translate-y-[10px] border-b-[5px] border-[#ff8000] pb-[5px] text-[clamp(1.5rem,3vw,2.2rem)] font-bold tracking-widest md:static md:mx-auto md:translate-y-0 md:text-center">
-          About us
-        </h2>
-
-        <div className="grid w-full max-w-[1000px] grid-cols-1 gap-10 md:grid-cols-3">
-          <div className="group rounded-2xl border border-white/10 p-5 transition-transform duration-300 hover:-translate-y-2 hover:border-white/30 backdrop-blur-md">
-            <h3 className="mb-3 text-[clamp(1.2rem,2vw,1.5rem)] font-semibold">
-              活動内容
-            </h3>
-            <p className="leading-relaxed opacity-80">
-              動画編集
-              <br />
-              Pythonを用いたゲーム開発
-              <br />
-              Webサイト、Webアプリの開発
-              <br />
-              イラスト制作
-            </p>
+      <section className="mt-35">
+        <div>
+          <p className="opacity-80 text-[#ff8000]">ACTIVITIES</p>
+          <h1 className="text-[clamp(1.5rem,3vw,2rem)] underline underline-offset-10 decoration-2 decoration-[#ff8000] mb-5">
+            活動内容
+          </h1>
+        </div>
+        <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 gap-6">
+          <div className="mb-2.5 p-4 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
+            <Image src="/Play.svg" alt="play" width={35} height={35} />
+            <div className="flex-1 min-w-0">
+              <h2 className="text-[clamp(1rem,3vw,1.5rem)] break-keep">
+                動画編集
+              </h2>
+              <p className="text-sm opacity-60 break-keep">Video Editing</p>
+            </div>
           </div>
 
-          <div className="group rounded-2xl border border-white/10 p-5 transition-transform duration-300 hover:-translate-y-2 hover:border-white/30 backdrop-blur-md">
-            <h3 className="mb-3 text-[clamp(1.2rem,2vw,1.5rem)] font-semibold">
-              活動場所・時間
-            </h3>
-            <p className="leading-relaxed opacity-80">
-              木曜日を除いた平日の授業後
-              <br />
-              15:40から17:00まで
-              <br />
-              北校舎3階の小ゼミナール室で活動しています。
-            </p>
+          <div className="mb-2.5 p-4 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
+            <Image src="/Globe.svg" alt="globe" width={35} height={35} />
+            <div>
+              <h2 className="text-[clamp(1rem,3vw,1.5rem)]">
+                Webサイト・Webアプリ開発
+              </h2>
+              <p className="text-sm opacity-60">
+                Website & Web Application Development
+              </p>
+            </div>
           </div>
 
-          <div className="group rounded-2xl border border-white/10 p-5 transition-transform duration-300 hover:-translate-y-2 hover:border-white/30 backdrop-blur-md">
-            <h3 className="mb-3 text-[clamp(1.2rem,2vw,1.5rem)] font-semibold">
-              活動人数
-            </h3>
-            <p className="leading-relaxed opacity-80">
-              1年生: 11人
-              <br />
-              2年生: 11人
-            </p>
-            <p className="mt-2 text-sm opacity-60">※2025年度時点</p>
+          <div className="mb-2.5 p-4 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
+            <Image src="/Code.svg" alt="code" width={35} height={35} />
+            <div>
+              <h2 className="text-[clamp(1rem,3vw,1.5rem)]">
+                Pythonを用いたゲーム開発
+              </h2>
+              <p className="text-sm opacity-60">Game Creating With Python</p>
+            </div>
+          </div>
+
+          <div className="mb-2.5 p-4 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
+            <Image
+              src="/Edit_Pencil_Line_01.svg"
+              alt="pencil"
+              width={35}
+              height={35}
+            />
+            <div>
+              <h2 className="text-[clamp(1rem,3vw,1.5rem)]">イラスト制作</h2>
+              <p className="text-sm opacity-60">Digital Art</p>
+            </div>
           </div>
         </div>
       </section>
