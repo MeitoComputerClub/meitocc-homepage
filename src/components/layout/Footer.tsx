@@ -17,7 +17,7 @@ export default function Footer() {
           <a href="">Twitter</a>
         </li>
         <li>
-          <a href="">instagram</a>
+          <a href="">Instagram</a>
         </li>
         <li>
           <a href="">Github</a>
