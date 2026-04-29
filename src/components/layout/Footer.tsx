@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer>
+    <footer className="bg-[#111] text-white">
       <h3>関連リンク</h3>
       <ul>
         <li>

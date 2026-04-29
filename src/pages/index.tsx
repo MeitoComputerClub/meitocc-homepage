@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative z-0 min-h-screen overflow-hidden mb-2.5 bg-[#111] p-10 text-white">
+    <main className="relative z-0 min-h-screen overflow-hidden bg-[#111] p-10 text-white">
       {/* 背景のグリッド線 */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] mb-2.5 bg-size-[40px_40px]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] mb-2.5 bg-size-[40px_40px]" />
 
       {/* Hero Section */}
       <section
@@ -32,60 +32,85 @@ export default function Home() {
 
       {/* Info Section */}
       <section className="mt-35">
-        <div>
+        <div className="">
           <p className="opacity-80 text-[#ff8000]">ACTIVITIES</p>
-          <h1 className="text-[clamp(1.5rem,3vw,2rem)] underline underline-offset-10 decoration-2 decoration-[#ff8000] mb-5">
+          <h1 className="text-[clamp(1.5rem,3vw,2.5rem)] underline underline-offset-10 decoration-2 decoration-[#ff8000] mb-5">
             活動内容
           </h1>
         </div>
         <div className="max-w-5xl mx-auto px-2 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="mb-2.5 p-2 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
-            <Image src="/Play.svg" alt="play" width={35} height={35} />
+            <Image
+              className="bg-black rounded p-0.5"
+              src="/Play.svg"
+              alt="play"
+              width={35}
+              height={35}
+            />
             <div className="flex-1 min-w-0">
-              <h2 className="text-[clamp(1rem,3vw,1.5rem)] break-keep">
+              <h2 className="text-[clamp(0.9rem,3vw,1.5rem)] break-keep">
                 動画編集
               </h2>
-              <p className="text-sm opacity-60 break-keep">Video Editing</p>
+              <p className="text-[clamp(0.77rem,3vw,0.88rem)] opacity-60 break-keep">
+                Video Editing
+              </p>
             </div>
           </div>
 
           <div className="mb-2.5 p-2 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
-            <Image src="/Globe.svg" alt="globe" width={35} height={35} />
+            <Image
+              className="bg-black rounded p-0.5"
+              src="/Globe.svg"
+              alt="globe"
+              width={35}
+              height={35}
+            />
             <div className="flex-1 min-w-0">
-              <h2 className="text-[clamp(1rem,3vw,1.5rem)] whitespace-nowrap">
+              <h2 className="text-[clamp(0.9rem,3vw,1.5rem)] whitespace-nowrap">
                 Webサイト・Webアプリ開発
               </h2>
-              <p className="text-sm opacity-60">
+              <p className="text-[clamp(0.77rem,3vw,0.88rem)] opacity-60">
                 Website & Web App Development
               </p>
             </div>
           </div>
 
           <div className="mb-2.5 p-2 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
-            <Image src="/Code.svg" alt="code" width={35} height={35} />
+            <Image
+              className="bg-black rounded p-0.5"
+              src="/Code.svg"
+              alt="code"
+              width={35}
+              height={35}
+            />
             <div className="flex-1 min-w-0">
-              <h2 className="text-[clamp(1rem,3vw,1.5rem)] whitespace-nowrap">
+              <h2 className="text-[clamp(0.9rem,3vw,1.5rem)] whitespace-nowrap">
                 Pythonを用いたゲーム開発
               </h2>
-              <p className="text-sm opacity-60">Game Creating With Python</p>
+              <p className="text-[clamp(0.77rem,3vw,0.88rem)]  opacity-60">
+                Game Creating With Python
+              </p>
             </div>
           </div>
 
           <div className="mb-2.5 p-2 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4">
             <Image
+              className="bg-black rounded p-0.5"
               src="/Edit_Pencil_Line_01.svg"
               alt="pencil"
               width={35}
               height={35}
             />
             <div className="flex-1 min-w-0">
-              <h2 className="text-[clamp(1rem,3vw,1.5rem)]">イラスト制作</h2>
-              <p className="text-sm opacity-60">Digital Art</p>
+              <h2 className="text-[clamp(0.9rem,3vw,1.5rem)]">イラスト制作</h2>
+              <p className="text-[clamp(0.77rem,3vw,0.88rem)] opacity-60">
+                Digital Art
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="">
+        <div className="bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center">
           {/* 時間>人数>場所 */}
           <div className="">
             <h2 className="">活動日・時間</h2>
@@ -108,7 +133,13 @@ export default function Home() {
         <div className="">
           <h2 className="">活動場所</h2>
           <p className="text-sm opacity-60">LOCATION</p>
-          <Image src="/Map_pin.svg" alt="Map_Pin" width={35} height={35} />
+          <Image
+            className="bg-black rounded p-0.5"
+            src="/Map_pin.svg"
+            alt="Map_Pin"
+            width={35}
+            height={35}
+          />
           <p className="">北校舎3階</p>
           <p className="">小ゼミナール室</p>
         </div>
@@ -117,5 +148,5 @@ export default function Home() {
   );
 }
 
-// メモ　活動内容をカードの左端にそろえる、MEMBERSとSCHEDULEの画像を拾ってくる、フッターに使うURLを貼る、イースター機能
+// メモ　活動内容をカードの左端にそろえる、フッターに使うURLを貼る
 //question書く内容: 男女構成、活動場所、時間、兼部、
