@@ -31,7 +31,12 @@ export default function Header() {
           className="fixed right-5 top-5 z-30 block text-2xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
+          <Image
+            src="/Hamburger_LG.svg"
+            alt="menuIcon"
+            width={40}
+            height={40}
+          />
         </button>
 
         {/* Overlay */}
