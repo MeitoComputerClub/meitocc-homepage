@@ -7,12 +7,8 @@ export default function Home() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] mb-2.5 bg-size-[40px_40px]" />
 
       {/* Hero Section */}
-      <section
-        className="relative mt-[clamp(40px,6vw,100px)] flex flex-col items-start justify text"
-        l-border-l-2
-        border-l-
-      >
-        <div className="relative">
+      <section className="mt-[clamp(40px,6vw,100px)]">
+        <div className="max-w-5xl mx-auto px-2 md:px-6">
           <h1 className="text-[clamp(2.5rem,8vw,6rem)] font-extrabold leading-[0.9] tracking-tighter text-[#20b2aa] md:tracking-normal">
             M~~~~
             <br />
@@ -24,7 +20,7 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mt-0.5 text-[clamp(1.2rem,2.5vw,1.8rem)] tracking-widest md:absolute mdm-5 md-l-border-l-2 border-l-0 md:translate-y-2.5 md:whitespace-nowrap">
+          <p className="mt-0.5 text-[clamp(1.2rem,2.5vw,1.8rem)] tracking-widest md:whitespace-nowrap">
             design and development
           </p>
         </div>
