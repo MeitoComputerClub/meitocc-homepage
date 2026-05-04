@@ -34,8 +34,8 @@ export default function Header() {
           <Image
             src="/Hamburger_LG.svg"
             alt="menuIcon"
-            width={40}
-            height={40}
+            width={35}
+            height={35}
           />
         </button>
 

@@ -14,7 +14,7 @@ export default function Home() {
       >
         <div className="relative">
           <h1 className="text-[clamp(2.5rem,8vw,6rem)] font-extrabold leading-[0.9] tracking-tighter text-[#20b2aa] md:tracking-normal">
-            MEITO
+            M~~~~
             <br />
             COMPUTER
             <br />
@@ -152,7 +152,7 @@ export default function Home() {
             <li className="">1年生: 11人</li>
             <li className="">2年生: 11人</li>
           </ul>
-          <p className="text-sm mt-1">※2025年度時点</p>
+          <p className="text-sm mt-1 opacity-60">※2025年度時点</p>
         </div>
 
         <div className="bg-[#222] border-l-3 rounded border-l-[#ff8000] p-4 flex flex-col gap-2">
