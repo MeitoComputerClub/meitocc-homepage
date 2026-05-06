@@ -7,7 +7,8 @@ export default function Gallery() {
         Gallery
       </h1>
       <p className="text-[clamp(0.77rem,3vw,1rem)] opacity-80 text-center mt-1.5">
-        制作物など
+        {/* 制作物など */}
+        Coming Soon...
       </p>
     </section>
   );

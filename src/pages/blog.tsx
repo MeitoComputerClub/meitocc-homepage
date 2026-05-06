@@ -7,7 +7,8 @@ export default function Blog() {
         Blog
       </h1>
       <p className="text-[clamp(0.77rem,3vw,1rem)] opacity-80 text-center mt-1.5">
-        活動の様子、制作物の宣伝など。不定期更新。
+        {/* 活動の様子、制作物の宣伝など。不定期更新。 */}
+        Coming Soon...
       </p>
     </section>
   );

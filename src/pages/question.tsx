@@ -7,7 +7,8 @@ export default function Question() {
         Question
       </h1>
       <p className="text-[clamp(0.77rem,3vw,1rem)] opacity-80 text-center mt-1.5">
-        よくある質問
+        {/* よくある質問 */}
+        Coming Soon...
       </p>
     </section>
   );
