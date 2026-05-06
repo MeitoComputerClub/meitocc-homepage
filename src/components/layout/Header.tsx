@@ -28,14 +28,26 @@ export default function Header() {
         </Link>
 
         <button
-          className="fixed right-5 top-5 z-30 block text-2xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
+          className="fixed right-5 top-5 z-30 w-8 h-6 md:hidden flex items-center justify-center"
         >
-          <Image
-            src="/Hamburger_LG.svg"
-            alt="menuIcon"
-            width={35}
-            height={35}
+          {/* 共通スタイル */}
+          <span
+            className={`absolute left-0 top-1/2 w-full h-[2px] bg-white rounded-full transition-all duration-300
+      ${isOpen ? "rotate-45" : "-translate-y-2"}
+    `}
+          />
+
+          <span
+            className={`absolute left-0 top-1/2 w-full h-[2px] bg-white rounded-full transition-all duration-300
+      ${isOpen ? "opacity-0" : ""}
+    `}
+          />
+
+          <span
+            className={`absolute left-0 top-1/2 w-full h-[2px] bg-white rounded-full transition-all duration-300
+      ${isOpen ? "-rotate-45" : "translate-y-2"}
+    `}
           />
         </button>
 
@@ -49,14 +61,13 @@ export default function Header() {
 
         {/* Navigation */}
         <nav
-          className={`fixed right-5 top-5 z-20 transition-all duration-300 md:static md:flex-1 md:opacity-100 md:scale-100 ${
+          className={`fixed right-5 top-16 z-20 transition-all duration-300 ease-out md:static md:flex-1 md:opacity-100 md:scale-100 ${
             isOpen
-              ? "scale-100 opacity-100"
-              : "scale-75 opacity-0 pointer-events-none md:pointer-events-auto"
+              ? "translate-x-0 opacity-100"
+              : "translate-x-5 opacity-0 pointer-events-none"
           }`}
-          onClick={(e) => e.stopPropagation()}
         >
-          <ul className="flex flex-col gap-5 bg-[#444] p-5 md:flex-row md:items-center md:justify-evenly md:bg-transparent md:p-0 md:gap-7.5 md:mt-5 text-white">
+          <ul className="flex flex-col gap-5 bg-[#222]/90 backdrop-blur-md border border-white/10 shadow-xl shadow-black/40 rounded-xl p-5 md:flex-row md:items-center md:border-none md:shadow-none md:bg-transparent md:p-0 md:gap-10 md:mt-5 text-white">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
