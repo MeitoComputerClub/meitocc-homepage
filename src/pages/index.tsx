@@ -61,7 +61,7 @@ export default function Home() {
             <div className="mb-2.5 p-2 bg-[#222] border-l-3 rounded border-l-[#ff8000] flex items-center gap-4 h-full">
               <Image
                 className="bg-black rounded p-0.5"
-                src="/Globe.svg"
+                src="/globe.svg"
                 alt="globe"
                 width={35}
                 height={35}
@@ -176,7 +176,7 @@ export default function Home() {
           <div className="flex items-center gap-3 mb-2">
             <Image
               className="bg-black rounded p-0.5"
-              src="/Map_pin.svg"
+              src="/Map_Pin.svg"
               alt="Map_Pin"
               width={35}
               height={35}
