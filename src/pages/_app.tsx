@@ -4,6 +4,11 @@ import { sora, noto, zen } from "@/lib/fonts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
+export const metadata = {
+  title: "MeitoCC",
+  description: "名東高校コンピュータ部",
+};
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={zen.className}>
