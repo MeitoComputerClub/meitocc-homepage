@@ -33,19 +33,19 @@ export default function Header() {
         >
           {/* 共通スタイル */}
           <span
-            className={`absolute left-0 top-1/2 w-full h-[2px] bg-white rounded-full transition-all duration-300
+            className={`absolute left-0 top-1/2 w-full h-0.5 bg-white rounded-full transition-all duration-300
       ${isOpen ? "rotate-45" : "-translate-y-2"}
     `}
           />
 
           <span
-            className={`absolute left-0 top-1/2 w-full h-[2px] bg-white rounded-full transition-all duration-300
+            className={`absolute left-0 top-1/2 w-full h-0.5 bg-white rounded-full transition-all duration-300
       ${isOpen ? "opacity-0" : ""}
     `}
           />
 
           <span
-            className={`absolute left-0 top-1/2 w-full h-[2px] bg-white rounded-full transition-all duration-300
+            className={`absolute left-0 top-1/2 w-full h-0.5 bg-white rounded-full transition-all duration-300
       ${isOpen ? "-rotate-45" : "translate-y-2"}
     `}
           />
@@ -53,7 +53,7 @@ export default function Header() {
 
         {/* Overlay */}
         <div
-          className={`fixed inset-0 z-10 bg-white/10 backdrop-blur-[3px] transition-opacity duration-300 ${
+          className={`fixed inset-0 z-10 bg-white/10 backdrop-blur-[3px] transition-opacity duration-300 md:hidden ${
             isOpen ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
           onClick={() => setIsOpen(false)}
@@ -61,13 +61,34 @@ export default function Header() {
 
         {/* Navigation */}
         <nav
-          className={`fixed right-5 top-16 z-20 transition-all duration-300 ease-out md:static md:flex-1 md:opacity-100 md:scale-100 ${
-            isOpen
-              ? "translate-x-0 opacity-100"
-              : "translate-x-5 opacity-0 pointer-events-none"
-          }`}
+          className={`fixed right-5 top-16 z-20 transition-all duration-300 ease-out
+
+    md:static
+    md:flex md:w-full
+    md:justify-center
+    md:opacity-100 md:translate-x-0 md:pointer-events-auto
+           ${
+             isOpen
+               ? "translate-x-0 opacity-100"
+               : "translate-x-5 opacity-0 pointer-events-none"
+           }`}
         >
-          <ul className="flex flex-col gap-5 bg-[#222]/90 backdrop-blur-md border border-white/10 shadow-xl shadow-black/40 rounded-xl p-5 md:flex-row md:items-center md:border-none md:shadow-none md:bg-transparent md:p-0 md:gap-10 md:mt-5 text-white">
+          <ul
+            className="
+              flex flex-col gap-5
+              bg-[#222]/90 backdrop-blur-md
+              border border-white/10
+              shadow-xl shadow-black/40
+              rounded-xl p-5 text-white
+
+              md:flex-row
+              md:items-center
+              md:gap-10
+              md:bg-transparent
+              md:border-none
+              md:shadow-none
+              md:p-0"
+          >
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
