@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { sora } from "@/pages/_app";
+import { sora } from "@/lib/fonts";
 
 export default function Home() {
   return (
