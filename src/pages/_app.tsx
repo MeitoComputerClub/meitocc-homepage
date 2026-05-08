@@ -16,6 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>MeitoCC</title>
         <meta name="description" content="名東高校コンピュータ部"></meta>
+        <meta
+          name="google-site-verification"
+          content="i4SLLwBEHfq8G249jKdCxgEdzQkPFgTw-h6_ZJNAOAs"
+        />
       </Head>
       <Header />
       <Component {...pageProps} />
