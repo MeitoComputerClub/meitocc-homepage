@@ -3,6 +3,7 @@ export default function Gallery() {
   return (
     <>
       <Head>
+        <title>MeitoCC Gallery</title>
         <meta name="description" content="制作物などを展示しています。" />
       </Head>
       <section className="relative z-0 min-h-screen overflow-hidden bg-[#111] p-10 text-white">

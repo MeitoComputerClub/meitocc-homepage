@@ -3,6 +3,7 @@ export default function Blog() {
   return (
     <>
       <Head>
+        <title>MeitoCC Blog</title>
         <meta
           name="description"
           content="活動の様子、制作物の宣伝などを不定期で行います。"

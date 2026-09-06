@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <>
         <Head>
+          <title>MeitoCC Top</title>
           <meta
             name="description"
             content="サイトトップ 弊部の主な情報を掲載しています。"

@@ -3,6 +3,7 @@ export default function Question() {
   return (
     <>
       <Head>
+        <title>MeitoCC Question</title>
         <meta name="description" content="弊部に寄せられた質問に答えます" />
       </Head>
       <section className="relative z-0 min-h-screen overflow-hidden bg-[#111] p-10 text-white">
