@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meitocc.vercel.app/sitemap.xml
