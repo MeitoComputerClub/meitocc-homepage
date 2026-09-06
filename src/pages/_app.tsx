@@ -15,7 +15,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={zen.className}>
       <Head>
         <title>MeitoCC</title>
-        <meta name="description" content="名東高校コンピュータ部"></meta>
+        <meta
+          name="description"
+          content="名東高校コンピュータ部の公式サイトです。"
+        ></meta>
         <meta
           name="google-site-verification"
           content="i4SLLwBEHfq8G249jKdCxgEdzQkPFgTw-h6_ZJNAOAs"
