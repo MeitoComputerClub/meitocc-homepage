@@ -1,18 +1,17 @@
 import Image from "next/image";
 import { sora } from "@/lib/fonts";
-import Head from "next/head";
+// import Head from "next/head";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   return (
     <>
       <>
-        <Head>
-          <title>MeitoCC Top</title>
-          <meta
-            name="description"
-            content="サイトトップ 弊部の主な情報を掲載しています。"
-          />
-        </Head>
+        <SEO
+          title="MeitoCC Top"
+          description="サイトトップ 弊部の主な情報を掲載しています。"
+          url="https://meitocc.vercel.app/"
+        />
       </>
       <main className="relative z-0 min-h-screen overflow-hidden bg-[#111] p-10 text-white">
         {/* 背景のグリッド線 */}

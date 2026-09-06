@@ -1,11 +1,13 @@
-import Head from "next/head";
+// import Head from "next/head";
+import SEO from "@/components/SEO";
 export default function Gallery() {
   return (
     <>
-      <Head>
-        <title>MeitoCC Gallery</title>
-        <meta name="description" content="制作物などを展示しています。" />
-      </Head>
+      <SEO
+        title="MeitoCC Gallery"
+        description="制作物などを展示しています。"
+        url="https://meitocc.vercel.app/"
+      />
       <section className="relative z-0 min-h-screen overflow-hidden bg-[#111] p-10 text-white">
         {/* 背景グリッド線 */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] mb-2.5 bg-size-[40px_40px]" />
