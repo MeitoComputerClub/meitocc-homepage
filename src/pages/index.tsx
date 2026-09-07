@@ -9,7 +9,7 @@ export default function Home() {
       <>
         <SEO
           title="Top"
-          description="サイトトップ 弊部の主な情報を掲載しています。"
+          description="名東高校コンピュータ部の公式サイトです。活動状況などを紹介しています。"
           url="https://meitocc.vercel.app/"
         />
       </>
