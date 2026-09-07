@@ -13,7 +13,7 @@ export default function SEO({
   url,
   image = "https://meitocc.vercel.app/ogp.png",
 }: SEOProps) {
-  const siteName = "MEITO COMPUTER CLUB";
+  const siteName = "MeitoCC";
 
   const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
