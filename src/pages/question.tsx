@@ -4,7 +4,7 @@ export default function Question() {
   return (
     <>
       <SEO
-        title="MeitoCC Question"
+        title="Question"
         description="弊部に寄せられた質問に答えます。"
         url="https://meitocc.vercel.app/"
       />

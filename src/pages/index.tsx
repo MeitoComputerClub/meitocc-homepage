@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <>
         <SEO
-          title="MeitoCC Top"
+          title="Top"
           description="サイトトップ 弊部の主な情報を掲載しています。"
           url="https://meitocc.vercel.app/"
         />

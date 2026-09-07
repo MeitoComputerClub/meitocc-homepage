@@ -4,7 +4,7 @@ export default function Gallery() {
   return (
     <>
       <SEO
-        title="MeitoCC Gallery"
+        title="Gallery"
         description="制作物などを展示しています。"
         url="https://meitocc.vercel.app/"
       />

@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title="MeitoCC Blog"
+        title="Blog"
         description="活動の様子、制作物の宣伝などを不定期で行います。"
         url="https://meitocc.vercel.app/"
       />
