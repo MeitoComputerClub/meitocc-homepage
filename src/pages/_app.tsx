@@ -23,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
           name="google-site-verification"
           content="i4SLLwBEHfq8G249jKdCxgEdzQkPFgTw-h6_ZJNAOAs"
         />
+        <link rel="icon" href="/aurora.svg" type="image/svg+xml" />
       </Head>
       <Header />
       <Component {...pageProps} />
